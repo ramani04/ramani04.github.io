@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="description">
+  <title>ONLINE_BLOOD_PLASMA_BANK</title>
+
+
+  <style>
+body {background-image: url("https://www.inquirer.com/resizer/w_51vbaeDuaZ3CTKLejgKYYhXlU=/1400x932/smart/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/IVQKYTI7QVB7FGCS3QHSQGKLOY.jpg"); ; font-family: Arial, Helvetica, sans-serif;}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+
+.button {
+  background-color: orange;
+  color: white;
+  text-align: center;
+
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: orange;
+   border: none;
+  color: white;
+  margin: 3px 1px;
+  cursor: pointer;
+ }
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  /*padding: 14px 200px;*/
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  padding-bottom:10px;
+  padding-top: 10px;
+ }
+
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+ 
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 30%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(1,1,1); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+.pading1
+ {
+   padding-bottom: 100px;
+   padding-left: 500px;
+   padding: 12px 15px;
+  } 
+
+.pading
+ {
+   padding-top: 100px;
+   padding-left: 50px;
+   text-shadow: 5px 0.1px Black;
+   padding-top: 25px 12px;
+  } 
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 12px 15px;
+  text-align: center;
+  text-decoration: none;
+  }
+
+a:hover, a:active {
+  background-color: white;
+}
+
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {<body>
+  background-color: #4CAF50;
+}
+
+</style>
+<style>
+.dropbtn {padding: 14px 200px;
+  background-color: #4CAF50;
+text-align:center;
+  color: white;
+  font-size: 16px;
+  border: none;
+  width: 50px;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.robo{
+  padding-top: 50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-danger bg-light">
+    
+<a class="navbar-brand">ONLINE BLOOD AND PLASMA BANK </a>
+
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="#" onclick="document.getElementById('id01').style.display='block'">
+        <i style='font-size:20px' class='fas'>&#xf007;</i>
+         Login</a>
+    </li><br>
+    <li class="nav-item">
+      <a class="nav-link" href="/registration" target="_blank">
+        <i class='fas fa-pen' style='font-size:20px'></i>
+         Signup</a>
+    </li>
+  </ul>
+  
+</nav>
+
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <center><h1 class="pading" style="color: pink">WELCOME TO ONLINE BLOOD & PLASMA BANK </h1></center>
+  <center>
+
+    
+    
+    <div method="get"class="dropdown">
+  <button class="dropbtn">blood
+  </button>
+  <div class="dropdown-content">
+    <a href="index.html">Donor</a>
+    <a href="inner-page.html">Reciver</a>
+</div>
+  </div>
+  
+       <button type="plasma" class="dropbtn" onclick="window.location.href='index.html';" >Plasma</button>
+
+</center>
+<div class="robo" >
+<center><h4 class="padding" style="color:white">INSTRUCTIONS FOR DONOR</h4></center>
+<center><button type="button" onclick="alert('\n1.Age should be atleast 18 years\n2.No health issues\n3.No tattoo from past 12 Months')">click here!</button></center></div>
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="/action_page.php">
+   <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+      <img src="https://images.fineartamerica.com/images-medium-large-5/plus-icon-glassy-red-round-button-faysal-ahamed.jpg"  alt="Avatar" class="avatar">
+
+      </div>
+
+     <div class="container">
+      <i class='fas fa-user-alt' style='font-size:24px'></i>
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" title="must contain at least 8 or more characters" minlength = "8" maxlength = "20" name="uname" required>
+     <br><br>
+     <i class='fas fa-key' style='font-size:24px'></i>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number,one uppercase, one lowercase letter,one special character and at least 8 or more characters" maxlength = "15" required>
+        <br>
+        <br>
+      <button type="submit">Login</button>
+      <br>
+      <label>
+        <input type="checkbox"  name="remember"> Remember me </input>
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot password?</a></span>
+    </div>
+ </form>
+</div>
+
+
+
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
