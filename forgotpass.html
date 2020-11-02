@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Forgot Password</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="forgot password">
+  <meta name="keywords" content="Online blood,blood donors">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <link rel="icon" href="data:image/png;base64,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">
+  
+<style>
+
+#highlighted {
+    position: relative;
+    background-color: #d91111;
+}
+@media (min-width: 992px)
+#highlighted .container-fluid {
+    margin-bottom: 2.5rem;
+}
+#highlighted .container-fluid h1, #highlighted .container-fluid p {
+    color: #FFF;
+}
+.h1, h1 {
+    font-size: 54.93px;
+}
+.h1, h1, h2, h3, h4, h5, h6 {
+    font-family: Verlag,museo-sans,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: #414141;
+}
+.h1, body, h1, h2, h3, h4, h5, h6, html {
+    font-weight: 300;
+}
+#content {
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+.interior-page {
+    background-color: #FFF;
+    padding-bottom: 30px;
+}
+#highlighted+#content.interior-page .interior-page-nav {
+    margin-top: -4em;
+}
+#highlighted+#content.interior-page .interior-page-nav, .interior-page .interior-page-nav {
+    padding-left: 0;
+}
+.sidebar {
+    margin-top: 2em;
+}
+@media (min-width: 1200px)
+.col-lg-2 {
+    width: 16.66666667%;
+}
+.content-area-right {
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.container-fluid>.row h2.crumb-title {
+    margin-bottom: 0;
+}
+.page-title {
+    min-height: 50px;
+}
+.page-title, ul {
+    margin: 0;
+    list-style: none;
+}
+.content-crumb-div {
+    margin: 5px 0 20px;
+}
+a {
+    text-decoration: none;
+}
+.container-fluid .row .modal, .page .modal {
+    position: fixed;
+    top: 35%;
+}
+#highlighted+#content.interior-page .interior-page-nav, .interior-page .interior-page-nav {
+    padding-left: 0;
+}
+#highlighted+#content.interior-page .interior-page-nav {
+    margin-top: -4em;
+}
+.dynamicDiv.panel-group {
+    border: 1px solid #E7E9E9;
+    margin-left: 30px;
+}
+.panel-group {
+    margin-bottom: 0;
+    background-color: #fff;
+}
+.panel-group .panel {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+.panel-group .panel-heading {
+    padding: 0;
+    border: none;
+}
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+.panel-group .panel-heading .panel-title {
+    font-size: 1.1em;
+    font-family: Verlag,museo-sans,'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.interior-page-nav .panel-group .panel-heading .panel-title a {
+    background: 0 0;
+}
+.panel-group .panel-heading .panel-title a {
+    display: block;
+    padding: 15px 45px 15px 15px;
+    background: url(/resources/images/misc/icon_accordion-open.png) 95% center no-repeat #f6f6f6;
+}
+span.subMenuHighlight, ul.panel-heading li.panel-title a:hover {
+    color: #ED3C95;
+}
+.panel-group .panel-heading .panel-title {
+    font-size: 1.1em;
+    font-family: Verlag,museo-sans,'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+ul.panel-heading {
+    margin-bottom: 1px;
+}
+.panel-group .panel-heading .panel-title a {
+    display: block;
+    padding: 15px 45px 15px 15px;
+    background: url(/resources/images/misc/icon_accordion-open.png) 95% center no-repeat #f6f6f6;
+}
+.panel-group {
+    margin-bottom: 0;
+    background-color: #fff;
+}
+.label-default {
+    background-color: #FFF;
+    margin-top: 10px;
+}
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.form-control {
+    border-radius: 0;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #d91111;
+    border-color: #ea3e10;
+    width: 100%;
+}
+.btn-block {
+    display: block;
+}
+.btn {
+    padding: 8px 28px;
+    font-weight: 400;
+    -webkit-transition: background .3s ease-in;
+    transition: background .3s ease-in;
+    white-space: normal;
+    border-width: 0 0 1px;
+}
+.content-area-right {
+   margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<div id="highlighted" class="hl-basic hidden-xs">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-10 col-lg-offset-2">
+        <h1>Forgot Password</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="content" class="interior-page">
+  <div class="container-fluid">
+    <div class="row">
+      <!--Sidebar-->
+      <div class="col-sm-3 col-md-3 col-lg-2 sidebar equal-height interior-page-nav hidden-xs">
+        <div class="dynamicDiv panel-group" id="dd.0.1.0">
+          <div id="subMenu" class="panel panel-default">
+            <ul class="subMenuHighlight panel-heading">
+              <li class="subMenuHighlight panel-title" id="subMenuHighlight">
+                <a id="li_291" class="subMenuHighlight" href=" https://ramani04.github.io/onlinebloodbank/register.html.html"><span>Register</span></a>
+              </li>
+            </ul>
+          <!-- <ul class="panel-heading">
+              <li class="panel-title">
+                <a class="subMenu1" href=""><span class="subMenuHighlight">Forgot Password</span></a>
+              </li>
+            </ul> -->
+            <ul class="panel-heading">
+              <li class="panel-title">
+                <a class="subMenu1" href=" https://ramani04.github.io/onlinebloodbank/login.html.html"><span>Login</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="item item-nopad item-noborder item-gold">
+            <a style="padding: 5% 0px";href="https://ramani04.github.io/onlinebloodbank/terms and conditions.html" class="btn btn-primary btn-block" role="button">LEARN MORE</a> 
+          </div>
+        </div>
+      </div>
+
+      <!--Content-->
+      <div class="col-sm-9 col-md-9 col-lg-10 content equal-height">
+        <div class="content-area-right">
+          <div class="content-crumb-div">
+            <a href="index.html">Home</a> | <a href="main.html">Your Account</a> | Forgot Password
+          </div>
+          <div class="row">
+            <div class="col-md-5 forgot-form">
+              <p>Please enter your email address below and we will send you information to change your password.</p>
+              <label class="label-default" for="un">Email Address</label> <input id="email_addy" name="email_addy" class="form-control" type="text"><br>
+              <a id="mybad" class="btn btn-primary"href="asdfg" role="button">I FORGOT</a>
+            </div>
+            <div class="col-md-5 forgot-return" style="display:none;">
+              <h2>Reset Password Sent</h2>
+              <p>An email has been sent to your address with a reset password you can use to access your account.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
