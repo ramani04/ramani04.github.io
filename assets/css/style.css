@@ -523,7 +523,7 @@ section {
 /* Services Section
 --------------------------------*/
 #services {
-  padding: 60px 0px 40px 0;
+  padding: 60px 0 40px 0;
 }
 
 #services .box {
@@ -618,7 +618,46 @@ section {
 --------------------------------*/
 
 /*--------------------------------------------------------------
-# Breadcrumbs
+# Breadcrumbs# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 15px 0;
+  background: #f9f9fb;
+  min-height: 40px;
+  margin-top: 110px;
+}
+
+@media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 58px;
+  }
+}
+
+.breadcrumbs h2 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.breadcrumbs ol li + li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li + li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #555186;
+  content: "/";
+}
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
